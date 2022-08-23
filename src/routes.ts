@@ -6,6 +6,7 @@
  const router = Router()
  
  
-router.get('/', UserController.index)
+router.get('/user', UserController.index)
+router.get('/user/:id', UserController.findById)
 
 export default router

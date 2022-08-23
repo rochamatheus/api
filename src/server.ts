@@ -2,9 +2,13 @@ import express from 'express'
 // conectar com o banco mongo DB
 // importa o mongoose
 import mongoose from 'mongoose';
+import router from './routes';
 
 // inicialização aplicação com express
-const app = express();
+const app = express()
+
+app.use(express.json)
+app.use(router)
 
 // aqui fazemos a conexão com o mongo DB
 mongoose.connect('mongodb+srv://matheus:130597@cluster0.l7ncc1c.mongodb.net/?retryWrites=true&w=majority')
